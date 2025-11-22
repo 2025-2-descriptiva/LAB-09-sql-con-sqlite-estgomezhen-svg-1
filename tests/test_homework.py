@@ -277,7 +277,7 @@ def test_08():
     result["avg(c21)"] = {k: round(v, 2) for k, v in result["avg(c21)"].items()}
 
     expected = {
-        "strftime('%Y', c23)": {0: "2016", 1: "2017", 2: "2018", 3: "2019"},
+         "strftime('%Y', c23)": {0: "2016", 1: "2017", 2: "2018", 3: "2019"},
         "avg(c21)": {
             0: 564.48,
             1: 515.16,
@@ -326,7 +326,6 @@ def test_11():
         query = file.read()
     print(pd.read_sql_query(query, conn).to_dict())
     assert pd.read_sql_query(query, conn).to_dict() == {"COUNT(*)": {0: 6}}
-
 
 def test_12():
     """Test 12."""
